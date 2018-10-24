@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">中控系统</string>
+    <string-array name="relay_port_icon">
+        <item>通用设备</item>
+        <item>电子书</item>
+        <item>二维码墙</item>
+        <item>广告机</item>
+        <item>互动橱窗</item>
+        <item>互动五连屏</item>
+        <item>环形LED屏</item>
+        <item>欢迎探索墙</item>
+        <item>叫号机</item>
+        <item>金融超市</item>
+        <item>全息贵金属</item>
+        <item>手机互动同屏</item>
+        <item>微信打印机</item>
+        <item>营销互动屏</item>
+        <item>智能导览</item>
+        <item>自助借还书</item>
+    </string-array>
+</resources>

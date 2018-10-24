@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "com.huige.mcapp"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'net.wimpi:jamod:1.2'
+    implementation 'commons-io:commons-io:2.5'
+    implementation 'org.apache.commons:commons-lang3:3.7'
+    implementation 'commons-codec:commons-codec:1.11'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.zhy:autolayout:1.4.5'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.google.code.gson:gson-parent:2.8.2'
+    implementation 'org.xutils:xutils:3.5.0'
+    implementation 'com.github.yuzhiqiang1993:zxing:2.1.8'
+    testImplementation 'junit:junit:4.12'
+}

@@ -1,0 +1,1327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    android:padding="6px"
+    tools:context="com.huige.mcapp.view.SettingActivity">
+
+    <LinearLayout
+        android:layout_width="440px"
+        android:layout_height="match_parent"
+        android:layout_marginRight="4px"
+        android:background="@layout/linear_layout_border"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="12px">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="全局设置"
+            android:textColor="@color/black"
+            android:textSize="30px" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginBottom="20px"
+            android:layout_marginTop="12px"
+            android:background="@color/line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="10px"
+            android:layout_marginTop="10px"
+            android:text="继电主机设置"
+            android:textColor="@color/black"
+            android:textSize="22px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="继电主机地址:"
+                android:textSize="26px" />
+
+            <EditText
+                android:id="@+id/et_relay_host"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="主机地址"
+                android:textSize="26px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="继电主机端口:"
+                android:textSize="26px" />
+
+            <EditText
+                android:id="@+id/et_relay_port"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="主机端口"
+                android:inputType="number"
+                android:textSize="26px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="闪开时间（0.1s）:"
+                android:textSize="26px" />
+
+            <EditText
+                android:id="@+id/et_relay_flash_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="闪开时间"
+                android:inputType="number"
+                android:textSize="26px" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="10px"
+            android:layout_marginTop="60px"
+            android:text="协议主机设置"
+            android:textColor="@color/black"
+            android:textSize="22px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="协议主机地址:"
+                android:textSize="26px" />
+
+            <EditText
+                android:id="@+id/et_rs232_host"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="主机地址"
+                android:textSize="26px" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="10px"
+            android:layout_marginTop="60px"
+            android:text="主机启用"
+            android:textColor="@color/black"
+            android:textSize="22px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_relay_enable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:textSize="24px"
+                android:text="继电主机" />
+
+            <CheckBox
+                android:id="@+id/cb_rs232_enable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:textSize="24px"
+                android:checked="false"
+                android:text="协议主机" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标题:"
+                android:textColor="@color/black"
+                android:textSize="22px" />
+
+            <EditText
+                android:id="@+id/et_bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="银行名称"
+                android:textSize="26px" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_qrcode_scanning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫码导入" />
+
+            <Button
+                android:id="@+id/btn_qrcode_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:text="数据导出" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_all_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部保存" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4px"
+            android:layout_weight="1"
+            android:background="@layout/linear_layout_border"
+            android:orientation="vertical"
+            android:padding="12px">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="协议主机设置"
+                android:textColor="@color/black"
+                android:textSize="30px" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginBottom="12px"
+                android:layout_marginTop="12px"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@layout/linear_layout_border"
+                    android:orientation="vertical"
+                    android:padding="12px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginBottom="10px"
+                        android:text="RS232端口一"
+                        android:textColor="@color/black"
+                        android:textSize="22px" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="端口名称:"
+                            android:textSize="26px" />
+
+                        <EditText
+                            android:id="@+id/et_rs232_1_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="端口名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="开机指令:"
+                            android:textSize="26px" />
+
+                        <EditText
+                            android:id="@+id/et_rs232_1_on_cmd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="开机指令"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="关机指令:"
+                            android:textSize="26px" />
+
+                        <EditText
+                            android:id="@+id/et_rs232_1_off_cmd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="关机指令"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_rs232_1_enable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10px"
+                            android:checked="false"
+                            android:text="启用" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:text="端口:"
+                            android:textSize="26px" />
+
+                        <EditText
+                            android:id="@+id/et_rs232_1_port"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="端口"
+                            android:inputType="number"
+                            android:textSize="26px" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4px"
+                    android:layout_marginRight="4px"
+                    android:layout_weight="1"
+                    android:background="@layout/linear_layout_border"
+                    android:orientation="vertical"
+                    android:padding="12px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginBottom="10px"
+                        android:text="RS232端口二"
+                        android:textColor="@color/black"
+                        android:textSize="22px" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="端口名称:"
+                            android:textSize="26px" />
+
+                        <EditText
+                            android:id="@+id/et_rs232_2_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="端口名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="开机指令:"
+                            android:textSize="26px" />
+
+                        <EditText
+                            android:id="@+id/et_rs232_2_on_cmd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="开机指令"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="关机指令:"
+                            android:textSize="26px" />
+
+                        <EditText
+                            android:id="@+id/et_rs232_2_off_cmd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="关机指令"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_rs232_2_enable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10px"
+                            android:checked="false"
+                            android:text="启用" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:text="端口:"
+                            android:textSize="26px" />
+
+                        <EditText
+                            android:id="@+id/et_rs232_2_port"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="端口"
+                            android:inputType="number"
+                            android:textSize="26px" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@layout/linear_layout_border"
+                    android:orientation="vertical"
+                    android:padding="12px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginBottom="10px"
+                        android:text="RS232端口三"
+                        android:textColor="@color/black"
+                        android:textSize="22px" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="名称:"
+                            android:textSize="26px" />
+
+                        <EditText
+                            android:id="@+id/et_rs232_3_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="开机指令:"
+                            android:textSize="26px" />
+
+                        <EditText
+                            android:id="@+id/et_rs232_3_on_cmd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="开机指令"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="关机指令:"
+                            android:textSize="26px" />
+
+                        <EditText
+                            android:id="@+id/et_rs232_3_off_cmd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="关机指令"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_rs232_3_enable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10px"
+                            android:checked="false"
+                            android:text="启用" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:text="端口名称:"
+                            android:textSize="26px" />
+
+                        <EditText
+                            android:id="@+id/et_rs232_3_port"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="端口名称"
+                            android:inputType="number"
+                            android:textSize="26px" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@layout/linear_layout_border"
+            android:orientation="vertical"
+            android:padding="12px">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="继电主机设置"
+                android:textColor="@color/black"
+                android:textSize="30px" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginBottom="20px"
+                android:layout_marginTop="12px"
+                android:background="@color/line" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_1_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒈" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_1_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_relay_1_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_2_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒉" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_2_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_relay_2_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/cb_relay_3_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    android:gravity="center"
+                                    android:text="⒊" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <Spinner
+                                    android:id="@+id/sn_relay_3_icon"
+                                    android:layout_width="250px"
+                                    android:layout_height="match_parent"
+                                    android:entries="@array/relay_port_icon"
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
+                            </LinearLayout>
+
+
+                            <EditText
+                                android:id="@+id/et_relay_3_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:hint="名称"
+                                android:textSize="26px" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_4_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒋" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_4_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+
+                        <EditText
+                            android:id="@+id/et_relay_4_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_5_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒌" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_5_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+
+                        <EditText
+                            android:id="@+id/et_relay_5_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_6_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒍" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_6_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_relay_6_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_7_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒎" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_7_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_relay_7_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_8_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒏" />
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_8_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_relay_8_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_9_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒐" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_9_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_relay_9_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_10_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒑" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_10_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_relay_10_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_11_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒒" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_11_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_relay_11_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_12_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒓" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_12_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_relay_12_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_13_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒔" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_13_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_relay_13_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_14_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒕" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_14_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_relay_14_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_15_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒖" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_15_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_relay_15_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_relay_16_enable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:text="⒗" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/sn_relay_16_icon"
+                                android:layout_width="250px"
+                                android:layout_height="match_parent"
+                                android:entries="@array/relay_port_icon"
+                                android:gravity="center"
+                                android:spinnerMode="dialog" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_relay_16_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="名称"
+                            android:textSize="26px" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

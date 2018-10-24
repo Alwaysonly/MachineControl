@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="42px"
+    android:paddingBottom="42px"
+    android:paddingLeft="80px"
+    android:paddingRight="80px"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/item_button"
+        android:background="@drawable/common"
+        android:layout_width="259px"
+        android:layout_height="204px" />
+    <TextView
+        android:id="@+id/item_text"
+        android:text="通用设备"
+        android:textSize="36px"
+        android:textColor="@color/white"
+        android:layout_width="259px"
+        android:gravity="center"
+        android:layout_height="76px" />
+</LinearLayout>
